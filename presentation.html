@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data: https:;
+    connect-src 'self';
+    object-src 'none';
+    frame-ancestors 'none';
+  ">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Présentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+<!-- BANNIÈRE -->
+<header class="banner text-white d-flex align-items-center" style="background: url('./assets/img/gallery/visuel/visuel_3.jpg') center/cover no-repeat;">
+  <div class="overlay"></div>
+  <div class="container position-relative z-2 text-center"></div>
+</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container-fluid px-4 position-relative">
+    <a class="navbar-brand d-flex align-items-center gap-2 me-4" href="404.html">
+      <img src="./assets/img/icons/logo.png" alt="Logo" class="logo-img img" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between align-items-center" id="navMenu">
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item"><a class="nav-link" href="404.html">L'équipe</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="activitesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Les activités</a>
+          <ul class="dropdown-menu" aria-labelledby="activitesDropdown">
+            <li><a class="dropdown-item" href="cycling.html">Le Cycling</a></li>
+            <li><a class="dropdown-item" href="training.html">Le Training Fonctionnel</a></li>
+            <li><a class="dropdown-item" href="crossfit.html">Le Crossfit</a></li>
+            <li><a class="dropdown-item" href="coaching.html">Personal Training - Coach Personnel</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="404.html">Nos offres</a></li>
+        <li class="nav-item"><a class="nav-link" href="404.html">Planning</a></li>
+        <li class="nav-item"><a class="nav-link" href="404.html">Le blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="404.html">Contact</a></li>
+      </ul>
+      <!-- Langue Mobile -->
+      <div class="dropdown lang-switch-dropdown text-center my-3 d-block d-lg-none position-relative">
+        <button class="dropdown-toggle btn btn-sm btn-gold px-4" type="button" id="langDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">FR</button>
+        <ul class="dropdown-menu fade mt-2" aria-labelledby="langDropdownMobile">
+          <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
+          <li><a class="dropdown-item" href="?lang=en">English</a></li>
+          <li><a class="dropdown-item" href="?lang=de">Deutsch</a></li>
+        </ul>
+      </div>
+      <!-- Réseaux desktop -->
+      <div class="d-none d-lg-flex align-items-center gap-4 contact-social navbar-contact-logos">
+        <div class="text-white">
+          <i class="fas fa-phone-alt me-2 text-pink"></i>05 59 47 84 18
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a href="404.html" class="text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html" class="text-white"><i class="fab fa-instagram"></i></a>
+          <a href="404.html" class="text-white" title="TripAdvisor">
+            <img src="./assets/img/icons/tripadvisor.png" alt="TripAdvisor" style="height: 20px;" />
+          </a>
+        </div>
+      </div>
+      <!-- Réseaux mobile -->
+      <div class="d-lg-none text-center mt-4">
+        <div class="text-white mb-2">
+          <i class="fas fa-phone-alt me-2 text-pink"></i>05 59 47 84 18
+        </div>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="404.html" class="text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html" class="text-white"><i class="fab fa-instagram"></i></a>
+          <a href="404.html" class="text-white" title="TripAdvisor">
+            <img src="./assets/img/icons/tripadvisor.png" alt="TripAdvisor" style="height: 20px;" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Langue Desktop -->
+    <div class="lang-switch-dropdown d-none d-lg-block">
+      <a href="?lang=en" class="lang-icon">EN</a>
+    </div>
+  </div>
+</nav>
+<!-- BOUTON RETOUR EN HAUT -->
+<a href="#" id="backToTop" title="Retour en haut"><i class="fas fa-chevron-up"></i></a>
+<!-- SECTION TRAINING -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="text-uppercase fw-bold">Le training fonctionnel</h2>
+    <div class="row mt-4 align-items-center">
+      <div class="col-md-6">
+        <p class="text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi iure esse molestias odio assumenda iste necessitatibus, vel ratione numquam officia maxime cum debitis ipsa nemo ipsam? Ut repellat in dolor ex fuga sit accusamus labore facilis consectetur. A, beatae totam molestias ut atque architecto sint officia laboriosam nobis non commodi magni dolor exercitationem eos culpa vitae sunt nihil placeat eius. Ipsa alias suscipit a ea, rerum aut dolorem facere veniam nam esse beatae autem ipsum quas provident architecto atque minus nostrum modi velit. Libero sint officiis laboriosam sit! Culpa sit maiores ipsam, numquam itaque quibusdam molestias distinctio temporibus consectetur rerum rem blanditiis assumenda, eligendi corrupti ducimus deleniti, hic similique minus voluptatibus ex non. Tempora similique dolor cumque, blanditiis illum facere maiores a unde quaerat dolore fugiat at necessitatibus quae repudiandae doloremque impedit recusandae repellat? Saepe, quibusdam. Deserunt exercitationem alias sint nesciunt ipsum ducimus cumque laudantium architecto, sit accusamus quod nisi dolorem? Repellat molestiae, pariatur porro ullam culpa sint aut! Quas placeat hic beatae fugit earum voluptates harum officia! Consectetur possimus iure vel in natus. Aspernatur enim aut tempora quos voluptatem perferendis ab, delectus, eaque at ad hic atque nemo in dolorum praesentium neque exercitationem architecto autem sapiente nostrum iste aliquam?</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center mt-4">
+          <a href="404.html" class="btn btn-gold">VOIR NOS OFFRES ET FORMULES</a>
+          <a href="404.html" class="btn btn-gold">CONTACT ET RÉSERVATION</a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="./assets/img/gallery/activites/greg.webp" alt="training" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECTION ATELIERS -->
+<section class="bg-light py-5 pb-0">
+  <div class="container text-center">
+    <h3 class="text-uppercase fw-bold">Les ateliers présentés dans le training fonctionnel</h3>
+    <div class="row mt-4 text-start">
+      <!-- Atelier TRX -->
+      <div class="col-md-3 atelier-card">
+        <img src="./assets/img/gallery/activites/trx_core.png" class="img-fluid rounded mb-3" alt="TRX Core">
+        <h5 class="fw-bold">TRX CORE</h5>
+        <p class="description">Force, équilibre, gainage avec sangles en suspension.</p>
+        <p class="duree">DURÉE : 45 MINUTES</p>
+      </div>
+      <!-- Atelier BOXE -->
+      <div class="col-md-3 atelier-card">
+        <img src="./assets/img/gallery/activites/boxe.png" class="img-fluid rounded mb-3" alt="Boxe">
+        <h5 class="fw-bold">BOXE</h5>
+        <p class="description">Boxe de rue, cardio boxing, kick boxing.</p>
+        <p class="duree">DURÉE : 30 MINUTES</p>
+      </div>
+      <!-- Atelier HIIT -->
+      <div class="col-md-3 atelier-card">
+        <img src="./assets/img/gallery/activites/hiit.png" class="img-fluid rounded mb-3" alt="HIIT">
+        <h5 class="fw-bold">HIIT</h5>
+        <p class="description">Séances intenses, cardio court avec repos réduit.</p>
+        <p class="duree">DURÉE : 30 MINUTES</p>
+      </div>
+      <!-- Atelier TRX FUSION -->
+      <div class="col-md-3 atelier-card">
+        <img src="./assets/img/gallery/activites/trx_fusion.png" class="img-fluid rounded mb-3" alt="TRX Fusion">
+        <h5 class="fw-bold">TRX FUSION</h5>
+        <p class="description">TRX, slam balls, cordes, kettlebells, cardio.</p>
+        <p class="duree">DURÉE : 30 MINUTES</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECTION IMAGES ACTIVITÉS -->
+<section class="py-5 pt-0 section-activites">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-12 col-md"><img src="./assets/img/gallery/activites/bg_activite_1.png" class="img-fluid img" alt=""></div>
+      <div class="col-12 col-md"><img src="./assets/img/gallery/activites/bg_activite_2.png" class="img-fluid img" alt=""></div>
+      <div class="col-12 col-md"><img src="./assets/img/gallery/activites/bg_activite_3.png" class="img-fluid img" alt=""></div>
+      <div class="col-12 col-md"><img src="./assets/img/gallery/activites/bg_activite_4.png" class="img-fluid img" alt=""></div>
+      <div class="col-12 col-md"><img src="./assets/img/gallery/activites/bg_activite_5.png" class="img-fluid img" alt=""></div>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="footer-main text-white">
+  <div class="container py-4">
+    <div class="row text-md-start align-items-start">
+      <div class="col-md-4 mb-4 mb-md-0 mt-md-3">
+        <div class="d-flex align-items-center mb-2">
+          <img src="./assets/img/icons/logo_footer.png" alt="Logo Studio" style="width: 35px;height:auto;">
+          <span class="ms-3" style="font-size:1.6rem; font-weight:bold;">À PROPOS</span>
+        </div>
+        <p class="mb-1" style="font-size:1rem;">2018 © Studio Sport & Coaching Biarritz</p>
+        <a href="404.html" class="text-white text-decoration-underline fw-bold" style="font-size:1.1rem;">Mentions légales</a>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="mb-2">STUDIO SPORT CORPORATE</h6>
+        <ul class="list-unstyled mb-0 footer-corporate-list">
+          <li>— <a href="404.html" class="footer-corporate-link">Crossfit Biarritz</a></li>
+          <li>— <a href="404.html" class="footer-corporate-link">Studio Center</a></li>
+          <li>— <a href="404.html" class="footer-corporate-link">Devenir partenaire</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="mb-2">COACHING & TRAINING AU PAYS BASQUE</h6>
+        <p class="mb-0">Coach à Biarritz, Fitness à Anglet, Crossfit à Bayonne.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom text-white py-2">
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="d-flex align-items-center">
+        <div class="footer-signature text-end">
+          <span class="small d-block fw-bold text-uppercase">Un site créé par</span>
+          <span class="small d-block fw-bold text-uppercase">L'AGENCE 364 COM</span>
+        </div>
+        <a href="https://www.364.fr" target="_blank" class="footer-logo-link ms-3">
+          <img src="./assets/img/icons/364.png" class="footer-logo-img" alt="Logo 364">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- SCRIPTS -->
+<script src="./js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
