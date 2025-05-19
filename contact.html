@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="
+    <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
     font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
-    img-src 'self' data: https:;
+    img-src 'self' data: https: maps.google.com;
     connect-src 'self';
+    frame-src 'self' https://maps.google.com https://www.google.com;
     object-src 'none';
     frame-ancestors 'none';
   ">
@@ -25,11 +27,10 @@
 </head>
 <body>
     <!-- BANNIÈRE -->
-<header class="banner text-white d-flex align-items-center" style="background: url('./assets/img/gallery/visuel/visuel_3.jpg') center/cover no-repeat;">
+<header class="banner text-white d-flex align-items-center" style="background: url('./assets/img/gallery/visuel/header-contact.jpg') center/cover no-repeat;">
   <div class="overlay"></div>
   <div class="container position-relative z-2 text-center"></div>
 </header>
-
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
   <div class="container-fluid px-4 position-relative">
@@ -41,20 +42,20 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between align-items-center" id="navMenu">
       <ul class="navbar-nav mx-auto text-center">
-        <li class="nav-item"><a class="nav-link" href="404.html">L'équipe</a></li>
+        <li class="nav-item"><a class="nav-link" href="./presentation.html">L'équipe</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="activitesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Les activités</a>
           <ul class="dropdown-menu" aria-labelledby="activitesDropdown">
-            <li><a class="dropdown-item" href="cycling.html">Le Cycling</a></li>
-            <li><a class="dropdown-item" href="training.html">Le Training Fonctionnel</a></li>
-            <li><a class="dropdown-item" href="crossfit.html">Le Crossfit</a></li>
-            <li><a class="dropdown-item" href="coaching.html">Personal Training - Coach Personnel</a></li>
+            <li><a class="dropdown-item" href="./404.html">Le Cycling</a></li>
+            <li><a class="dropdown-item" href="./404.html">Le Training Fonctionnel</a></li>
+            <li><a class="dropdown-item" href="./404.html">Le Crossfit</a></li>
+            <li><a class="dropdown-item" href="./404.html">Personal Training - Coach Personnel</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="404.html">Nos offres</a></li>
-        <li class="nav-item"><a class="nav-link" href="404.html">Planning</a></li>
-        <li class="nav-item"><a class="nav-link" href="404.html">Le blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="404.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="./404.html">Nos offres</a></li>
+        <li class="nav-item"><a class="nav-link" href="./404.html">Planning</a></li>
+        <li class="nav-item"><a class="nav-link" href="./404.html">Le blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
       </ul>
       <!-- Langue Mobile -->
       <div class="dropdown lang-switch-dropdown text-center my-3 d-block d-lg-none position-relative">
@@ -65,7 +66,6 @@
           <li><a class="dropdown-item" href="?lang=de">Deutsch</a></li>
         </ul>
       </div>
-
       <!-- Réseaux desktop -->
       <div class="d-none d-lg-flex align-items-center gap-4 contact-social navbar-contact-logos">
         <div class="text-white">
@@ -100,19 +100,103 @@
     </div>
   </div>
 </nav>
+<!-- SECTION FORMULAIRE DE CONTACT -->
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Coordonnées -->
+      <div class="col-md-4 mb-4">
+        <h4 class="mb-3 text-uppercase fw-bold">Nos coordonnées</h4>
+        <p><strong>Studio Sport & Coaching</strong><br>
+        01 Allée Marie Politzer<br>
+        64200 Biarritz</p>
+        <p><strong>Téléphone</strong><br>
+        05 59 47 84 18</p>
+        <p><strong>Horaires</strong><br>
+        Du lundi au vendredi<br>
+        de 8h à 14h, de 16h à 21h<br>
+        Le samedi de 10h à 13h</p>
+        <p><strong>Email</strong><br>
+        contact (at) studiobiarritz.com<br>
+        ou via ce formulaire</p>
+      </div>
+      <!-- Formulaire -->
+      <div class="col-md-8">
+        <h4 class="mb-3 text-uppercase fw-bold">Formulaire de contact</h4>
+        <form>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="VOTRE NOM" required>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="VOTRE PRÉNOM" required>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" class="form-control" placeholder="VOTRE TÉLÉPHONE">
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="VOTRE EMAIL" required>
+            </div>
+          </div>
+          <input type="text" class="form-control mb-3" placeholder="SUJET">
+          <textarea class="form-control mb-3" rows="5" placeholder="VOTRE MESSAGE" required></textarea>
+          <button type="submit" class="btn btn-gold px-5 py-2 fw-bold text-uppercase">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECTION MAP -->
+<section class="map-section">
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.157318059215!2d-1.5545479!3d43.4801438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5115213e98b9a1%3A0x570cb90c02e05e3f!2sBiarritz%2C%20France!5e0!3m2!1sfr!2sfr!4v1681999999999!5m2!1sfr!2sfr" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
 <!-- SECTION IMAGES ACTIVITÉS -->
 <section class="py-5 pt-0 section-activites">
   <div class="container">
     <div class="row g-3">
-      <div class="col-12 col-md"><img src="./assets/img/gallery/activites/bg_activite_1.png" class="img-fluid img" alt=""></div>
-      <div class="col-12 col-md"><img src="./assets/img/gallery/activites/bg_activite_2.png" class="img-fluid img" alt=""></div>
-      <div class="col-12 col-md"><img src="./assets/img/gallery/activites/bg_activite_3.png" class="img-fluid img" alt=""></div>
-      <div class="col-12 col-md"><img src="./assets/img/gallery/activites/bg_activite_4.png" class="img-fluid img" alt=""></div>
-      <div class="col-12 col-md"><img src="./assets/img/gallery/activites/bg_activite_5.png" class="img-fluid img" alt=""></div>
+      <div class="col-12 col-md">
+        <a href="https://www.instagram.com/tiboinshape/?hl=fr" target="_blank">
+          <img src="./assets/img/gallery/activites/bg_activite_1.png" class="img-fluid img" alt="Activité 1">
+        </a>
+      </div>
+      <div class="col-12 col-md">
+        <a href="https://www.instagram.com/tiboinshape/?hl=fr" target="_blank">
+          <img src="./assets/img/gallery/activites/bg_activite_2.png" class="img-fluid img" alt="Activité 2">
+        </a>
+      </div>
+      <div class="col-12 col-md">
+        <a href="https://www.instagram.com/tiboinshape/?hl=fr" target="_blank">
+          <img src="./assets/img/gallery/activites/bg_activite_3.png" class="img-fluid img" alt="Activité 3">
+        </a>
+      </div>
+      <div class="col-12 col-md">
+        <a href="https://www.instagram.com/tiboinshape/?hl=fr" target="_blank">
+          <img src="./assets/img/gallery/activites/bg_activite_4.png" class="img-fluid img" alt="Activité 4">
+        </a>
+      </div>
+      <div class="col-12 col-md">
+        <a href="https://www.instagram.com/tiboinshape/?hl=fr" target="_blank">
+          <img src="./assets/img/gallery/activites/bg_activite_5.png" class="img-fluid img" alt="Activité 5">
+        </a>
+      </div>
+      <div class="col-12 col-md">
+        <a href="https://www.instagram.com/tiboinshape/?hl=fr" target="_blank">
+          <img src="./assets/img/gallery/activites/bg_activite_6.png" class="img-fluid img" alt="Activité 6">
+        </a>
+      </div>
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer class="footer-main text-white">
   <div class="container py-4">
