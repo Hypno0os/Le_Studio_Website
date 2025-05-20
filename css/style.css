@@ -1,4 +1,6 @@
-/* RESET & BASE */
+/* =============================
+   RESET & BASE STYLES
+============================= */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,9 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* =============================
+   NAVBAR STYLES
+============================= */
 .custom-navbar {
   position: fixed;
   top: 0;
@@ -19,6 +23,26 @@ body {
   z-index: 9999;
   transition: opacity 0.3s ease-in-out;
 }
+
+/* Espacement horizontal entre les items du menu (desktop only) */
+.navbar-nav .nav-item {
+  margin-left: 22px;
+  margin-right: 22px;
+}
+.navbar-nav .nav-item:first-child {
+  margin-left: 0;
+}
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+/* Quand le menu passe en burger (XL = <1200px), on retire l'espacement */
+@media (max-width: 1199.98px) {
+  .navbar-nav .nav-item {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .custom-navbar .nav-link,
 .custom-navbar .navbar-brand,
 .custom-navbar span,
@@ -51,7 +75,9 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* LANGUE & DROPDOWN */
+/* =============================
+   LANG SWITCHER & DROPDOWN
+============================= */
 .lang-switch-dropdown .lang-icon {
   background-color: #CFAD6C;
   color: #000;
@@ -98,7 +124,9 @@ body {
   }
 }
 
-/* NAVBAR DROPDOWN */
+/* =============================
+   NAVBAR DROPDOWN MENU
+============================= */
 .dropdown-menu {
   background-color: black;
   border: none;
@@ -118,8 +146,7 @@ body {
   background-color: transparent;
   font-weight: bold;
 }
-
-/* NAVBAR ACTIVE ITEM */
+/* Highlight active or hovered navbar items */
 .nav-item .nav-link.active,
 .nav-item.dropdown:hover > .nav-link,
 .nav-item.dropdown .nav-link.show {
@@ -130,7 +157,9 @@ body {
   padding: 8px 12px;
 }
 
-/* BANNIÈRE */
+/* =============================
+   BANNER SECTION
+============================= */
 .banner {
   height: 500px;
   background-size: cover;
@@ -141,6 +170,7 @@ body {
   justify-content: center;
   color: white;
   padding-bottom: 60px;
+  padding-bottom: 0 !important;
 }
 .banner .overlay {
   position: absolute;
@@ -153,7 +183,9 @@ body {
   z-index: 2;
 }
 
-/* BOUTONS DORÉS */
+/* =============================
+   GOLD BUTTONS
+============================= */
 .btn-gold {
   background-color: #CFAD6C;
   color: white;
@@ -171,26 +203,41 @@ body {
   border-color: #b9975d;
 }
 
-/* TITRES (H2-H4) */
+/* =============================
+   HEADINGS (H2-H4)
+============================= */
 h2, h3, h4 {
   position: relative;
-  display: inline-block;
   margin-bottom: 1.5rem;
   text-align: center;
 }
-h2::after, h3::after, h4::after {
-  content: '';
+/* Trait gris sous les titres de section */
+.trait-section {
+  width: 200px;
+  border-top: 2px solid #ccc;
+  margin: 0 auto 1rem auto;
+}
+/* Titre souligné en doré */
+.titre-souligne {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+.titre-souligne::after {
+  content: "";
   position: absolute;
   left: 50%;
-  bottom: -8px;
+  bottom: 0;
   transform: translateX(-50%);
-  width: 40px;
+  width: 80px;
   height: 3px;
   background-color: #CFAD6C;
   border-radius: 2px;
 }
 
-/* SECTION ACTIVITÉS */
+/* =============================
+   ACTIVITIES SECTION
+============================= */
 .section-activites {
   background-color: #080808;
   margin-bottom: 0 !important;
@@ -215,103 +262,9 @@ h2::after, h3::after, h4::after {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* FOOTER */
-.footer-main {
-  background-color: #1e1f21;
-  color: white;
-  padding-top: 3rem;
-}
-.footer-main .container .row {
-  display: flex;
-  align-items: end;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.footer-main .col-md-4 {
-  flex: 1;
-  min-width: 280px;
-}
-footer h6 {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-.logo-footer {
-  max-height: 60px;
-  width: auto;
-  object-fit: contain;
-}
-.footer-main a {
-  color: white;
-  text-decoration: underline;
-}
-.footer-corporate-link {
-  color: #CFAD6C;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-corporate-link:hover,
-.footer-corporate-link:focus {
-  color: #b9975d;
-  text-decoration: underline;
-}
-.footer-bottom {
-  background-color: #121212;
-  padding: 10px 0;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #ccc;
-}
-.footer-bottom .container,
-.footer-bottom .d-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 48px;
-}
-.footer-signature {
-  text-align: right;
-  margin: 0;
-}
-.footer-logo-link {
-  margin-left: 1.5rem;
-  display: flex;
-  align-items: center;
-}
-.footer-logo-img {
-  height: 32px;
-  display: block;
-}
-
-/* RESPONSIVE FOOTER */
-@media (max-width: 767.98px) {
-  .footer-bottom .container,
-  .footer-bottom .d-flex {
-    flex-direction: column !important;
-    gap: 0.5rem;
-  }
-  .footer-signature {
-    text-align: center;
-  }
-  .footer-logo-link {
-    margin-left: 0;
-    margin-top: 0.5rem;
-    justify-content: center;
-  }
-}
-@media (max-width: 768px) {
-  .footer-main .container .row,
-  .footer-main .d-flex {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-main .col-md-4 {
-    width: 100%;
-  }
-}
-
-/* BOUTON RETOUR EN HAUT */
+/* =============================
+   BACK TO TOP BUTTON
+============================= */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -338,7 +291,9 @@ footer h6 {
   background-color: #b9975d;
 }
 
-/* ANIMATIONS */
+/* =============================
+   ANIMATIONS
+============================= */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -350,7 +305,9 @@ footer h6 {
   }
 }
 
-/*  MAP SECTION */
+/* =============================
+   MAP SECTION
+============================= */
 .map-section {
   height: 500px;
   width: 100%;
@@ -362,26 +319,122 @@ footer h6 {
   height: 100%;
   width: 100%;
 }
-/* Supprime l'espace au-dessus du training */
-section#training-section {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-.banner {
-  padding-bottom: 0 !important;
-}
-/* Supprimer toute marge et padding entre la bannière et la section */
-#training-section {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
+#training-section,
 #training-section .container {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Supprime le padding bas de la bannière si nécessaire */
-.banner {
-  padding-bottom: 0 !important;
+/* =============================
+   FOOTER STYLES
+============================= */
+.footer {
+  background-color: #282828;
+  padding-left: 0;
+  padding-right: 0;
+}
+.footer p,
+.footer a {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0;
+}
+.footer a {
+  text-decoration: underline;
+}
+.footer a:hover {
+  color: #CFAD6C !important;
+}
+.liens-nus {
+  text-decoration: none !important;
+  color: white;
+}
+.liens-nus a:hover {
+  color: #CFAD6C;
+}
+.footer ul {
+  font-family: 'Roboto', sans-serif;
+}
+.footer-bottom {
+  background: black;
+}
+
+/* =============================
+   RESPONSIVE FOOTER + MEDIA QUERIES
+============================= */
+@media (max-width: 991px) {
+  .nav-item-equipe {
+    margin-left: 0 !important;
+  }
+  .navbar {
+    margin-left: 0;
+  }
+  footer h4 {
+    font-size: 20px;
+  }
+  footer p,
+  footer li {
+    font-size: 13px;
+  }
+  .menu-burger-largeur a {
+    text-align: start;
+  }
+}
+@media (max-width: 900px) {
+  .inscriptions {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 801px) {
+  .slogan-main {
+    font-size: 6vw;
+  }
+}
+@media (max-width: 768px) {
+  .footer-main .container .row,
+  .footer-main .d-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-main .col-md-4 {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer-bottom .container,
+  .footer-bottom .d-flex {
+    flex-direction: column !important;
+    gap: 0.5rem;
+  }
+  .footer-signature {
+    text-align: center;
+  }
+  .footer-logo-link {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+  footer p,
+  footer li,
+  footer h4 {
+    text-align: center;
+  }
+  .logo-media-query {
+    justify-content: center;
+  }
+  .center-media-query {
+    text-align: center;
+    padding-bottom: 13px;
+  }
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #CFAD6C; 
+  
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 1;
+}
+.carousel-indicators .active {
+  background-color: #fff;
+  border: 2px solid #CFAD6C;
 }
