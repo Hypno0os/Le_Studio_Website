@@ -132,26 +132,26 @@
         <!-- Formulaire -->
         <div class="col-md-8">
           <h4 class="mb-3 text-uppercase fw-bold">Formulaire de contact</h4>
-          <form>
-            <div class="row g-3 mb-3">
-              <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="VOTRE NOM" required>
-              </div>
-              <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="VOTRE PRÉNOM" required>
-              </div>
-              <div class="col-md-6">
-                <input type="tel" class="form-control" placeholder="VOTRE TÉLÉPHONE">
-              </div>
-              <div class="col-md-6">
-                <input type="email" class="form-control" placeholder="VOTRE EMAIL" required>
-              </div>
-            </div>
-            <input type="text" class="form-control mb-3" placeholder="SUJET">
-            <textarea class="form-control mb-3" rows="5" placeholder="VOTRE MESSAGE" required></textarea>
-            <button type="submit" class="btn btn-gold px-5 py-2 fw-bold text-uppercase">Envoyer</button>
-          </form>
-        </div>
+                <form id="contactForm">
+                  <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <input type="text" id="nom" class="form-control" placeholder="VOTRE NOM" required>
+                  </div>
+                    <div class="col-md-6">
+                <input type="text" id="prenom" class="form-control" placeholder="VOTRE PRÉNOM" required>
+      </div>
+      <div class="col-md-6">
+        <input type="tel" id="tel" class="form-control" placeholder="VOTRE TÉLÉPHONE">
+      </div>
+      <div class="col-md-6">
+        <input type="email" id="email" class="form-control" placeholder="VOTRE EMAIL" required>
+      </div>
+    </div>
+    <input type="text" class="form-control mb-3" placeholder="SUJET">
+    <textarea class="form-control mb-3" rows="5" placeholder="VOTRE MESSAGE" required></textarea>
+    <button type="submit" class="btn btn-gold px-5 py-2 fw-bold text-uppercase">Envoyer</button>
+  </form>
+</div>
       </div>
     </div>
   </section>
